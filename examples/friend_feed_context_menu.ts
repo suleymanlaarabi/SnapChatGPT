@@ -1,4 +1,4 @@
-import { EnumPosArrangment, EnumUI } from "../data.types/interface-manager";
+import { EnumPosArrangement, EnumUI } from "../data.types/interface-manager";
 import { snapActivityContext } from "../src/context/snapActivityContext";
 
 export default function start() {
@@ -15,7 +15,7 @@ export default function start() {
               config.setBoolean("myBoolean", value, true);
             });
           })
-          .arrangement(EnumPosArrangment.SPACE_BETWEEN)
+          .arrangement(EnumPosArrangement.SPACE_BETWEEN)
           .fillMaxWidth()
           .padding(4);
       });

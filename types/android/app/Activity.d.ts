@@ -8,8 +8,6 @@ declare interface AndroidActivityMenu {}
 
 declare interface AndroidActivityMenuItem {}
 
-declare interface AndroidActivityView {}
-
 declare interface AndroidActivityKeyEvent {}
 
 declare interface AndroidActivityMotionEvent {}
@@ -27,6 +25,7 @@ declare interface AndroidActivity extends AndroidContentContext {
   onStop(): void;
   onDestroy(): void;
   onRestart(): void;
+  getPackageName(): string;
 
   runOnUiThread(call: () => any): void;
 

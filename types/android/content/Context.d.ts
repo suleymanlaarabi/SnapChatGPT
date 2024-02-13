@@ -27,7 +27,7 @@ interface ContentResolver {
 
 declare interface AndroidContentContext {
   // Méthodes pour accéder aux ressources et informations de l'application
-  getResources(): Resources;
+  getResources(): AndroidResources;
   getPackageManager(): PackageManager;
   getApplicationContext(): AndroidContentContext;
   getSharedPreferences(name: string, mode: number): SharedPreferences;

@@ -1,4 +1,4 @@
-export const enum EnumHttpMethode {
+export const enum EnumHttpMethod {
   POST = "POST",
   GET = "GET",
   PUT = "PUT",
@@ -15,7 +15,7 @@ export interface RequestBuilder {
   url(url: string): RequestBuilder;
   addHeader(name: string, value: string): RequestBuilder;
   removeHeader(name: string): RequestBuilder;
-  method(method: EnumHttpMethode, body: string | undefined): RequestBuilder; // byte[] | java.io.InputStream
+  method(method: EnumHttpMethod, body: string | undefined): RequestBuilder; // byte[] | java.io.InputStream
 }
 
 export interface NetworksResponse {

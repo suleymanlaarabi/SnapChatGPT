@@ -1,11 +1,11 @@
 {
   "name": "snap-module-starter",
   "snapModule": {
-    "name": "snap_module_name",
-    "displayName": "SnapModuleName",
-    "description": "SnapModuleDescription",
-    "version": "1.0",
-    "author": "YOU"
+    "name": "replay_with_ai",
+    "displayName": "AI Respond",
+    "description": "A straightforward AI for automatic responses to your friends",
+    "version": "1.0", 
+    "author": "Suleyman Laarabi"
   },
   "type": "module",
   "version": "1.0.0",

@@ -23,8 +23,9 @@ var messaging = require(\"messaging\");
 var config = require(\"config\");
 var im = require(\"interface-manager\");
 var ipc = require(\"ipc\");
-var javaInterface = require(\"java-interfaces\");
+var javaInterfaces = require(\"java-interfaces\");
 var hooker = require(\"hooker\");
+var events = require(\"events\");
 
 "
 

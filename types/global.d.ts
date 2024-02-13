@@ -2,11 +2,11 @@ import { Config } from "../data.types/config";
 import { Class, Hooker } from "../data.types/hooker";
 import { InterfaceManager } from "../data.types/interface-manager";
 
+import { Events } from "../data.types/events";
 import { IPC } from "../data.types/ipc";
 import { JavaInterface } from "../data.types/java-interface";
 import { Messaging } from "../data.types/messaging";
 import { Networking } from "../data.types/networking";
-
 declare global {
   const networking: Networking;
   const config: Config;
@@ -15,6 +15,7 @@ declare global {
   const ipc: IPC;
   const messaging: Messaging;
   const hooker: Hooker;
+  const events: Events;
 
   interface Array<T> {
     size: () => number;

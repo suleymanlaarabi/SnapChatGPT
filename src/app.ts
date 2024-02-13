@@ -1,30 +1,12 @@
-import getMyUserId from "./common/user/useUser";
+import createInterface from "./common/loader/loadInterface";
 import { StartFunctionProps } from "./index";
+import initAutoReply from "./views/autoReply";
 
 export default function start({
   snapActivityContext,
   conversationToolboxContext,
   settingsContext,
 }: StartFunctionProps) {
-  snapActivityContext.events.push({
-    start: (activity) => {
-      shortToast("Snap Activiter launched: " + getMyUserId(activity));
-    },
-  });
-  conversationToolboxContext.events.push({
-    start: (builder) => {
-      shortToast("Conversation toolbox opened");
-      builder.button("Hello World !", () => {
-        shortToast("Hello World !");
-      });
-    },
-  });
-  settingsContext.events.push({
-    start: (builder) => {
-      shortToast("Settings opened");
-      builder.button("Hello World !", () => {
-        shortToast("Hello World !");
-      });
-    },
-  });
+  createInterface();
+  initAutoReply();
 }

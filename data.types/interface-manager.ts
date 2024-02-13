@@ -10,7 +10,7 @@ export const enum EnumPos {
   TOP = "top",
   BOTTOM = "bottom",
 }
-export const enum EnumPosArrangment {
+export const enum EnumPosArrangement {
   START = "start",
   END = "end",
   TOP = "top",
@@ -55,7 +55,7 @@ export interface NodeUI {
 }
 
 export interface RowColumnNodeUI extends NodeUI {
-  arrangement(arrangement: EnumPosArrangment): RowColumnNodeUI;
+  arrangement(arrangement: EnumPosArrangement): RowColumnNodeUI;
   alignment(alignment: EnumPosAlignment): RowColumnNodeUI;
   spacedBy(spacing: number): RowColumnNodeUI;
 }

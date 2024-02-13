@@ -1,5 +1,5 @@
 import {
-  EnumHttpMethode,
+  EnumHttpMethod,
   NetworksHeader,
   NetworksResponse,
 } from "../../../data.types/networking";
@@ -7,38 +7,28 @@ import {
 interface UseFetchProps {
   url: string;
   body?: string;
-  methode?: EnumHttpMethode;
+  method?: EnumHttpMethod;
   headers?: NetworksHeader[];
 }
 
-interface UseFetchResponse {
+export interface UseFetchResponse {
   getJSON(): () => any;
   response: NetworksResponse;
 }
 
-export default function useFetch(
-  props: UseFetchProps,
-  callback: (res: UseFetchResponse) => void
-) {
-  shortToast(props.url);
+export default function useFetch(props: UseFetchProps) {
   const request = networking.newRequest().url(props.url);
 
-  if (props.methode != EnumHttpMethode.GET && props.methode) {
-    request.method(props.methode, props.body);
+  if (props.method != EnumHttpMethod.GET && props.method) {
+    request.method(props.method, props.body);
   }
 
   props.headers?.forEach((header) => {
     request.addHeader(header.name, header.value);
   });
-
-  networking.enqueue(request, (error, response) => {
-    if (error != null) {
-      logInfo("Failed to make request: " + error);
-      return;
-    }
-    callback({
-      getJSON: () => JSON.parse("" + response.bodyAsString),
-      response: response,
-    });
-  });
+  const response = networking.execute(request);
+  return {
+    getJSON: () => JSON.parse("" + response.bodyAsString),
+    response: response,
+  };
 }
