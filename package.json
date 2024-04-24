@@ -1,0 +1,28 @@
+{
+  "name": "snap-module-starter",
+  "snapModule": {
+    "name": "replay_with_ai_BETA",
+    "displayName": "AI Respond",
+    "description": "A straightforward AI for automatic responses to your friends",
+    "version": "3.0",
+    "author": "Suleyman Laarabi"
+  },
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "tsc-watch --module ES6 --onSuccess \"./onSuccess.sh\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^4.9.6",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "tsc-watch": "^6.0.4"
+  }
+}

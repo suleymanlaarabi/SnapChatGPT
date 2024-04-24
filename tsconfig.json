@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": ".tempDist",
+    "target": "ES5",
+    "typeRoots": ["types/*"]
+  },
+
+  "include": ["./src/**/*", "types/*", "types/android/**/**/*", "examples/*"],
+
+  "exclude": ["node_modules"]
+}
